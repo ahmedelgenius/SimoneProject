@@ -1,0 +1,265 @@
+:root {
+  --mainColor: #20c997;
+  --secondColor: #fff;
+}
+body {
+  color: #4c4d4d;
+  font-family: "Poppins", sans-serif;
+}
+/* start navbar */
+.navbar {
+  z-index: 1000;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: var(--secondColor);
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: var(--secondColor);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #20c997;
+}
+.navbar-light .navbar-brand {
+  font-size: 28px;
+  color: var(--secondColor);
+  font-weight: bold;
+}
+.navbar-toggler-icon {
+  color: var(--secondColor);
+}
+.navbar-light .navbar-brand:hover {
+  color: var(--secondColor);
+}
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+/* end navbar */
+/* start home */
+.home {
+  background-image: url(../images/intro-bg.jpg);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.overlay-home {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.home-content {
+  color: var(--secondColor);
+}
+.home .btn {
+  color: var(--mainColor);
+  border: var(--mainColor) 2px solid;
+  padding: 1rem 3rem;
+}
+.home .btn:hover {
+  background-color: var(--mainColor);
+  color: var(--secondColor);
+}
+.chevron-down {
+  position: absolute;
+  z-index: 3;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 25px;
+  text-align: center;
+  color: var(--secondColor);
+}
+.chevron-down span {
+  position: relative;
+  animation: upAndDown 2s infinite alternate;
+}
+@keyframes upAndDown {
+  0% {
+    bottom: 100%;
+  }
+  25% {
+    bottom: 75%;
+  }
+  50% {
+    bottom: 50%;
+  }
+
+  100% {
+    bottom: 0%;
+  }
+}
+h1 {
+  text-align: center;
+}
+h1::after {
+  content: "I'm a Designer";
+  animation: text 5s alternate infinite;
+}
+@keyframes text {
+  0% {
+    content: " I m|";
+  }
+  10% {
+    content: " I m a Desi|";
+  }
+  20% {
+    content: " I m a Designer|";
+  }
+  30% {
+    content: "I m a Desi|";
+  }
+  40% {
+    content: "I m|";
+  }
+  50% {
+    content: "I m|";
+  }
+  60% {
+    content: "I m a Free|";
+  }
+  70% {
+    content: "I m a Freelancer|";
+  }
+  80% {
+    content: "I m a Free|";
+  }
+  100% {
+    content: "I m|";
+  }
+}
+/* end home */
+.content-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+/* start about */
+
+.text-top {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #dee3e4;
+  line-height: 1.5;
+}
+.section-top p {
+  font-size: 2.25rem;
+  font-weight: 600;
+  position: relative;
+}
+.section-top p::after {
+  content: " ";
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 3px;
+
+  background-color: var(--mainColor);
+}
+.about .btn {
+  background-color: var(--mainColor);
+  color: var(--secondColor);
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+}
+.about h3 span {
+  color: var(--mainColor);
+}
+.about p span {
+  font-weight: bold;
+}
+.about p a {
+  color: var(--mainColor);
+}
+.about h4 {
+  font-size: 3rem;
+  color: #6c757d;
+}
+/* end about */
+/* start services */
+.services-card {
+  position: relative;
+  padding-left: 5.5rem;
+  margin-top: 2rem;
+}
+.ser-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--secondColor);
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-bottom: 0;
+}
+.ser-icon i {
+  color: var(--mainColor);
+  font-size: 2rem;
+}
+/* end services */
+/* start resume */
+.resume .resume-card {
+  border: 2px solid #f5f5f5;
+  padding: 1rem;
+}
+.resume .resume-date {
+  background-color: var(--mainColor);
+  width: fit-content;
+  color: var(--secondColor);
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.resume .progress-bar {
+  background-color: var(--mainColor);
+}
+/* end resume */
+/* start portfolio */
+.work-img {
+  position: relative;
+  overflow: hidden;
+}
+.work-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.work-img :hover {
+  opacity: 1;
+}
+.work-img :hover img {
+  transform: scale(1.1);
+}
+.work-img img {
+  transition: all 0.5s;
+}
+.nav-item button {
+  background-color: transparent !important;
+  color: gray !important;
+}
+.nav-item button.active {
+  color: #20c997 !important;
+  border-bottom: 2px solid var(--mainColor);
+}
+.nav-item button:hover {
+  color: var(--mainColor) !important;
+}
